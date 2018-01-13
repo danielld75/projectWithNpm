@@ -1,0 +1,27 @@
+{
+  "name": "nauka_npm",
+  "version": "1.0.0",
+  "description": "testowy plik do nauki npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielld75/projectWithNpm.git"
+  },
+  "keywords": [
+    "nauka",
+    "npm"
+  ],
+  "author": "daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielld75/projectWithNpm/issues"
+  },
+  "homepage": "https://github.com/danielld75/projectWithNpm#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
