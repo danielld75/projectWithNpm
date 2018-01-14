@@ -9,7 +9,7 @@ process.stdin.on('readable', function () {
   var input = process.stdin.read();
   if (input != null) {
     var instruction = input.toString().trim();
-    //emitter.emit('beforeCommand', instruction);
+    emitter.emit('beforeCommand', instruction);
     switch (instruction) {
       case 'a':
         process.stdout.write('Quitting app!\n');

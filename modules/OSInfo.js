@@ -10,7 +10,7 @@ function getOsInfo() {
 
   process.stdout.write(colors.green("System: ") + type + "\n" + colors.red("Release: ") + release + "\n");
   process.stdout.write(colors.blue("CPU: ") + cpu + "\n");
-  process.stdout.write(colors.bgMagenta.yellow("Uptime ~ : ") + formatTime.forTime(uptime) + '\n');
+  process.stdout.write(colors.bgMagenta.yellow("Uptime ~ : ") + formatTime.formatTime(uptime) + '\n');
   process.stdout.write(colors.grey.bold("USER: ") + userInfo.username + colors.yellow(" homedir: ") + userInfo.homedir + '\n');
 }
 
