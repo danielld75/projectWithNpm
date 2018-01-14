@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/danielld75/projectWithNpm#readme",
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.1.2",
+    "events": "^1.1.1"
   }
 }
