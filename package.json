@@ -24,6 +24,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "events": "^1.1.1",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "stat-mode": "^0.2.2"
   }
 }
