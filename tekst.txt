@@ -1,1 +1,6 @@
 .git,.gitignore,.idea,cat.jpg,index.js,modules,node_modules,package-lock.json,package.json,tekst.txt
+A tak wygląda po zapisie! 
+A tak wygląda po zapisie! 
+A tak wygląda po zapisie! 
+A tak wygląda po zapisie! 
+A tak wygląda po zapisie! 

@@ -1,13 +1,31 @@
 var OSInfo = require("./modules/OSInfo");
 var EventEmitter = require("events").EventEmitter;
+var StatMode = require('stat-mode');
+var http = require('http');
+
+var server = http.createServer();
+server.on('request', function(request, response){
+  response.setHeader("Content-type", "text/html; charset=utf-8; lang=en");
+  if (request.method === 'GET' && request.url === '/hello') {
+    response.write('<h1>Hello world!</h1>');
+    response.end();
+  } else {
+    response.status = 404;
+    response.write('<h1>404: Zła ścieżka!</h1>');
+    response.end();
+  }
+});
+server.listen(8080);
+
 var emitter = new EventEmitter();
 var fs = require('fs');
-var StatMode = require('stat-mode');
+
 
 function readDir(path) {
   fs.readdir(path, 'utf-8', function (err, files){
     fs.writeFile('./tekst.txt', files, 'utf-8', function () {
       fs.readFile('./tekst.txt', 'utf-8', function (err, data) {
+        if (err) throw err;
         console.log(data);
       });
     });
@@ -36,7 +54,7 @@ emitter.on("beforeCommand", function (instruction) {
   console.log("You wrote: " + instruction + ", trying to run command");
 });
 emitter.on("afterCommand", function () {
-  console.log("Finished command")
+  console.log("Finished command");
 });
 
 process.stdin.setEncoding("utf-8");
