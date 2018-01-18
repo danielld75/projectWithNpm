@@ -23,6 +23,7 @@ var fs = require('fs');
 
 function readDir(path) {
   fs.readdir(path, 'utf-8', function (err, files){
+    if (err) throw err;
     fs.writeFile('./tekst.txt', files, 'utf-8', function () {
       fs.readFile('./tekst.txt', 'utf-8', function (err, data) {
         if (err) throw err;
@@ -38,6 +39,7 @@ fs.stat("./cat.jpg", function (err, stats) {
 });
 
 fs.readFile('./tekst.txt', 'utf-8', function (err, data) {
+  if (err) throw err;
   console.log("Dane przed zapisem!".blue);
   console.log(data);
   fs.appendFile('./tekst.txt', '\nA tak wygląda po zapisie! ', function (err) {
